@@ -5,10 +5,19 @@ var bodyParser = require('body-parser');
 var path = require('path');
 
 var connection = mysql.createConnection({
-    host     : 'localhost',
-    user     : 'root',
-    password : 'password',
+    host     : 'exam.ckstkb31hkt6.us-east-2.rds.amazonaws.com',
+    user     : 'admin',
+    password : "",
     database : 'exam'
+});
+
+connection.connect(function(err) {
+  if (err) {
+    console.error('Database connection failed: ' + err.stack);
+    return;
+  }
+
+  console.log('Connected to database.');
 });
 
 var app = express();
@@ -53,6 +62,7 @@ app.post('/', function(request, response) {
             }
             response.end();
         });
+        connection.end();
     }
 });
 
