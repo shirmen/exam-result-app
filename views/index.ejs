@@ -1,0 +1,133 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+          integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css"
+          integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/main.css">
+
+    <title>СЭТГЭХ ЧАДВАРЫН НАМРЫН ҮНЭЛГЭЭ, СОРИЛГО -2019</title>
+</head>
+<body class="bg">
+<h3 class="text-white text-center" id="login-title">СЭТГЭХ ЧАДВАРЫН НАМРЫН ҮНЭЛГЭЭ, СОРИЛГО - 2019</h3>
+<h4 class="text-white text-center">ДҮН ХАРАХ ХЭСЭГ</h4>
+<div class="container" id="login-container">
+    <form class="needs-validation" novalidate action="/" method="post">
+        <div class="form-row mb-3">
+            <div class="input-group mb-3 shadow">
+                <div class="input-group-prepend">
+                    <span class="input-group-text bg-white"><i class="fas fa-map-marker-alt fa-fw"></i></span>
+                </div>
+                <select class="form-control text-secondary" name="province" id="selectProvince" required>
+                    <option value="" selected hidden><p class="text-secondary">Сургуулийнхаа байршлыг сонгоно уу ...</p></option>
+                    <option value="Архангай">Архангай</option>
+                    <option value="Баян-Өлгий">Баян-Өлгий</option>
+                    <option value="Баянхонгор">Баянхонгор</option>
+                    <option value="Булган">Булган</option>
+                    <option value="Говь-Алтай">Говь-Алтай</option>
+                    <option value="Говьсүмбэр">Говьсүмбэр</option>
+                    <option value="Дархан-Уул">Дархан-Уул</option>
+                    <option value="Дорноговь">Дорноговь</option>
+                    <option value="Дорнод">Дорнод</option>
+                    <option value="Дундговь">Дундговь</option>
+                    <option value="Завхан">Завхан</option>
+                    <option value="Орхон">Орхон</option>
+                    <option value="Өвөрхангай">Өвөрхангай</option>
+                    <option value="Өмнөговь">Өмнөговь</option>
+                    <option value="Сүхбаатар аймаг">Сүхбаатар</option>
+                    <option value="Сэлэнгэ">Сэлэнгэ</option>
+                    <option value="Төв">Төв</option>
+                    <option value="Увс">Увс</option>
+                    <option value="Ховд">Ховд</option>
+                    <option value="Хөвсгөл">Хөвсгөл</option>
+                    <option value="Хэнтий">Хэнтий</option>
+                    <option value="Баянгол">УБ Баянгол</option>
+                    <option value="Баянзүрх">УБ Баянзүрх</option>
+                    <option value="Налайх">УБ Налайх</option>
+                    <option value="Сонгинохайрхан">УБ Сонгинохайрхан</option>
+                    <option value="Сүхбаатар">УБ Сүхбаатар</option>
+                    <option value="Хан-Уул">УБ Хан-Уул</option>
+                    <option value="Чингэлтэй">УБ Чингэлтэй</option>
+                </select>
+                <div class="invalid-tooltip">Байршлын сонголт хоосон байна.</div>
+            </div>
+        </div>
+
+        <div class="form-row mb-3">
+            <div class="input-group mb-3 shadow">
+                <div class="input-group-prepend">
+                    <span class="input-group-text bg-white"><i class="fas fa-user-graduate fa-fw"></i></span>
+                </div>
+                <select class="form-control text-secondary" name="grade" id="selectGrade" required>
+                    <option value="" selected hidden>Ангиа сонгоно уу ...</option>
+                    <option value="1">1-р анги</option>
+                    <option value="2">2-р анги</option>
+                    <option value="3">3-р анги</option>
+                    <option value="4">4-р анги</option>
+                    <option value="5">5-р анги</option>
+                    <option value="6">6-р анги</option>
+                    <option value="7">7-р анги</option>
+                    <option value="8">8-р анги</option>
+                    <option value="9">9-р анги</option>
+                </select>
+                <div class="invalid-tooltip">Ангийн сонголт хоосон байна.</div>
+            </div>
+        </div>
+
+        <div class="form-row mb-3">
+            <div class="input-group mb-3 shadow">
+                <div class="input-group-prepend">
+                    <span class="input-group-text bg-white"><i class="fas fa-address-card fa-fw"></i></span>
+                </div>
+                <input type="text" class="form-control text-secondary" name="code" id="inputCode"
+                       required pattern="[0-9]{7}" placeholder="7 оронтой ID кодоо оруулна уу ...">
+                <div class="invalid-tooltip">ID код 7 оронтой тоо байх ёстой. Та дахин шалгана уу.</div>
+            </div>
+        </div>
+
+        <div class="form-row">
+            <button type="submit" class="btn btn-info w-100">Нэвтрэх</button>
+        </div>
+    </form>
+    <p class="text-danger"><%= message %>&nbsp;</p>
+</div>
+
+<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+        integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+        crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+        crossorigin="anonymous"></script>
+
+<script>
+    document.getElementById("selectProvince").value = '<%= province %>';
+    document.getElementById("selectGrade").value = '<%= grade %>';
+    document.getElementById("inputCode").value = '<%= code %>';
+
+    (function() {
+        'use strict';
+        window.addEventListener('load', function() {
+            var forms = document.getElementsByClassName('needs-validation');
+            var validation = Array.prototype.filter.call(forms, function(form) {
+                form.addEventListener('submit', function(event) {
+                    if (form.checkValidity() === false) {
+                        event.preventDefault();
+                        event.stopPropagation();
+                    }
+                    form.classList.add('was-validated');
+                }, false);
+            });
+        }, false);
+    })();
+</script>
+
+</body>
+</html>

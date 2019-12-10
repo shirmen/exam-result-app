@@ -1,0 +1,30 @@
+body, html {
+  height: 100%;
+}
+
+.bg {
+  background-image: url("../images/bg.jpg");
+  height: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+#login-title {
+  padding-top: 5%
+}
+
+#login-container {
+  padding: 20%;
+  padding-top: 3%;
+}
+
+.row {
+  margin-top: 1%;
+}
+
+.form-control {
+  -moz-appearance:none; /* Firefox */
+  -webkit-appearance:none; /* Safari and Chrome */
+  appearance:none;
+}

@@ -1,0 +1,145 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+          integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css"
+          integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/main.css">
+
+    <title>СЭТГЭХ ЧАДВАРЫН НАМРЫН ҮНЭЛГЭЭ, СОРИЛГО -2019</title>
+</head>
+<body>
+<div class="container" align="right">
+    <button class="btn btn-link btn-sm" onclick="myFunction()">Хадгалах</button>
+    <a class="btn btn-link btn-sm" href="/logout">Гарах</a>
+</div>
+<div class="container" id="capture">
+    <nav class="navbar navbar-light bg-primary justify-content-center">
+        <span class="navbar-text mb-0 h4 text-white">СЭТГЭХ ЧАДВАРЫН НАМРЫН ҮНЭЛГЭЭ, СОРИЛГО - 2019</span>
+    </nav>
+
+    <div class="row align-items-end">
+        <div class="col-sm-4"><img src="images/logo.png"></div>
+        <div class="col-sm justify-content-end">
+            <p class="font-italic text-right">Арван хоёр дахь удаагийн сорилгод амжилттай оролцсон<br>суралцагч танд амжилт хүсье.</p>
+        </div>
+        <div class="col-sm-2 text-center"><img src="images/agent.jpg" height="120px"></div>
+    </div>
+
+    <div class="row">
+        <div class="col-sm">
+            <div class="card border-primary mb-3">
+                <div class="card-header h5"><i class="fas fa-address-book fa-fw"></i>&nbsp;Суралцагчийн мэдээлэл</div>
+                <div class="card-body text-primary">
+                    <h5 class="card-title text-dark font-weight-bold"><%= data.last_name %>&nbsp;овогтой&nbsp;<%= data.first_name %></h5>
+                    <table class="table table-sm">
+                        <tbody>
+                        <tr>
+                            <td class="text-right" width="130px">Аймаг/дүүрэг :</td>
+                            <td class="text-primary font-weight-bold"><%= data.province %></td>
+                        </tr>
+                        <tr>
+                            <td class="text-right">Сургууль :</td>
+                            <td class="text-primary font-weight-bold"><%= data.school %></td>
+                        </tr>
+                        <tr>
+                            <td class="text-right">Анги :</td>
+                            <td class="text-primary font-weight-bold"><%= data.grade %>-<%= data.group %></td>
+                        </tr>
+                        <tr>
+                            <td class="text-right">ID код :</td>
+                            <td class="text-primary font-weight-bold"><%= data.id %></td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-sm">
+            <div class="card border-primary mb-3">
+                <div class="card-header h5"><i class="fas fa-trophy fa-fw"></i>&nbsp;Сорилгын дүн</div>
+                <div class="card-body">
+                    <h5 class="card-title">Таны авсан оноо:&nbsp;<span class="text-primary font-weight-bold"><%= data.score %></span>
+                    </h5>
+                    <h5 class="card-title">Таны үнэлгээ:&nbsp;<span class="text-primary font-weight-bold"><%= data.rating %></span>
+                    </h5>
+                    <p class="card-text text-primary"><%= data.description %></p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-sm">
+            <div class="card bg-light mb-3">
+                <div class="card-body">
+                    <p class="card-text">2019 оны намрын сорилго нь “Логик сэтгэлгээ” сэдвээр зохион байгуулагдсан.
+                        Уралдаан нь аналоги, тодорхойлох, зүй тогтол олох, ангилах, бүлэглэх, дүгнэх зэрэг логик сэтгэлгээний дэд
+                        үйлдлүүдийг сорьсон. Логик сэтгэлгээний суурь бага насанд бүрэлдэн, бага болон дунд ангид
+                        эрчимтэй хөгжиж, насанд хүрсэн үед сэтгэлгээний нэг хэлбэр болон төлөвшдөг.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-sm">
+            <div class="card bg-light mb-3">
+                <div class="card-body">
+                    <p class="card-text">Суралцагч бол олон талтай, онцгой өвөрмөц хувь хүн. Суралцагчийн амжилт тогтмол
+                        байх нь ховор бөгөөд бага, дунд ангид суралцагчийн сурах, хөгжих хурд харилцан
+                        адилгүй байна. Иймд тухайн суралцагч юун дээрээ алдсан, оносон, бусадтай харьцуулахад
+                        ямар түвшинд байгааг илрүүлж, улмаар ахиц гаргах, ахицыг урамшуулах нь чухал.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-sm">
+            <div class="card bg-light mb-3">
+                <div class="card-header">
+                    <i class="fas fa-info-circle fa-fw"></i>&nbsp;
+                    Суралцагчийн гүйцэтгэл нь бодит байдлаас багаар үнэлэгдэж болох хүчин зүйлс:
+                </div>
+                <div class="card-body">
+                    <ul>
+                        <li>Хариултын хуудастай ажиллах дадлага, туршлагабагатай
+                            /бодлогоо зөв бодсон боловч хариултын хуудсанд буруу хариуг тэмдэглэсэн г.м./
+                        </li>
+                        <li>Тухайн үеийн сэтгэл санааны байдал, анхаарал төвлөрөл</li>
+                        <li>Бодлогын өгөгдлийг унших ба ойлгох, харааны бэрхшээл</li>
+                        <li>Бусад хүчин зүйлс</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+        integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+        crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+        crossorigin="anonymous"></script>
+<script src="js/html2canvas.js"></script>
+
+<script>
+    function myFunction() {
+        html2canvas(document.getElementById('capture')).then(canvas => {
+            var a = document.createElement('a');
+            a.href = canvas.toDataURL("image/jpeg").replace("image/jpeg", "image/octet-stream");
+            a.download = 'result.jpg';
+            a.click();
+        });
+    }
+</script>
+</body>
+</html>
