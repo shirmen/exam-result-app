@@ -41,7 +41,6 @@ app.get('/', function(request, response) {
 });
 
 app.post('/', function(request, response) {
-    console.log(request.body);
     var province = request.body.province;
     var grade = request.body.grade;
     var code = request.body.code;
@@ -49,10 +48,12 @@ app.post('/', function(request, response) {
     if (province && grade && code) {
         connection.query('SELECT * FROM results2019 WHERE province = ? AND grade = ? AND id = ?', [province, grade, code], function(error, results, fields) {
             if (results.length > 0) {
+                console.log(JSON.stringify(request.body) + " - success!");
                 request.session.data = results[0];
                 request.session.logged_in = true;
                 response.redirect('/');
             } else {
+                console.log(JSON.stringify(request.body) + " - incorrect data!");
                 response.render('index', {
                     province: province,
                     grade: grade,
@@ -62,7 +63,8 @@ app.post('/', function(request, response) {
             }
             response.end();
         });
-        connection.end();
+    } else {
+        console.log(JSON.stringify(request.body) + " - empty data!");
     }
 });
 
